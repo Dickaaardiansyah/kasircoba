@@ -57,7 +57,7 @@ initializeDatabase()
 ║        POS System Backend v2.0 (MySQL)       ║
 ║        Layered: Model → Service → Controller  ║
 ╠══════════════════════════════════════════════╣
-║  URL  : http://localhost:${PORT}                 ║
+║  PORT : ${PORT.toString().padEnd(36)}║
 ║  DB   : ${(process.env.DB_NAME || "pos_system").padEnd(36)}║
 ╚══════════════════════════════════════════════╝`);
     });
