@@ -18,7 +18,7 @@
 --     yang dipakai saat item itu terjual, untuk keperluan laporan.
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- ─── UNITS (satuan) ─────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS units (

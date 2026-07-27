@@ -3,7 +3,7 @@
 -- Jalankan setelah init.sql dan purchase.sql
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- Tabel biaya operasional (operating expenses) — dasar perhitungan Laba Rugi
 CREATE TABLE IF NOT EXISTS expenses (

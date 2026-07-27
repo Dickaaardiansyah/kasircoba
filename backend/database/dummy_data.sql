@@ -14,7 +14,7 @@
 --     performa server, karena memproses ribuan baris lewat loop.
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- ── Bersihkan data dummy dari eksekusi sebelumnya (aman dijalankan ulang) ──
 -- Catatan: pakai DELETE (bukan TRUNCATE) agar tidak terbentur pembatasan

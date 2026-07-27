@@ -17,7 +17,7 @@
 --     (Debit Kas/Bank, Kredit Piutang Usaha)
 -- ─────────────────────────────────────────────────────────────────────────────
 
-USE pos_refactor;
+USE pos_coba;
 
 ALTER TABLE transactions
   MODIFY COLUMN payment_method

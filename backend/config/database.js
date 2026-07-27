@@ -66,6 +66,13 @@ async function transaction(fn) {
 
 // ─── Test koneksi & init pool ─────────────────────────────────────────────────
 async function initializeDatabase() {
+  console.log("DB Config:");
+  console.log({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    database: process.env.DB_NAME,
+  })
   createPool();
   try {
     const conn = await pool.getConnection();

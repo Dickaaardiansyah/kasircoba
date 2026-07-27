@@ -31,6 +31,9 @@ export default function Cashier() {
 
 function CashierPOS() {
   const p = useCashierPresenter();
+  const [showMobileCart, setShowMobileCart] = useState(false);
+
+  const cartTotalQty = p.cart.reduce((sum, item) => sum + item.qty, 0);
 
   return (
     <div className="pos-layout">
@@ -84,15 +87,24 @@ function CashierPOS() {
       </div>
 
       {/* ── Keranjang ────────────────────────────────────────────────── */}
-      <div className="pos-cart">
+      <div className={`pos-cart ${showMobileCart ? "pos-cart--open" : ""}`}>
         <div className="page-header" style={{ padding: "18px 16px 12px" }}>
           <div className="flex items-center gap-2">
             <ShoppingCart size={18} />
             <span className="font-bold">Keranjang ({p.cart.length})</span>
           </div>
-          {p.cart.length > 0 && (
-            <button className="btn btn-ghost btn-icon btn-sm" onClick={p.clearCart}><Trash2 size={14} /></button>
-          )}
+          <div className="flex items-center gap-2">
+            {p.cart.length > 0 && (
+              <button className="btn btn-ghost btn-icon btn-sm" onClick={p.clearCart}><Trash2 size={14} /></button>
+            )}
+            <button
+              className="btn btn-ghost btn-icon btn-sm cart-close-btn"
+              onClick={() => setShowMobileCart(false)}
+              aria-label="Tutup keranjang"
+            >
+              <X size={16} />
+            </button>
+          </div>
         </div>
 
         {p.cart.length === 0 ? (
@@ -150,6 +162,22 @@ function CashierPOS() {
           </button>
         </div>
       </div>
+
+      {/* ── Backdrop + tombol keranjang mengambang (mobile) ─────────────── */}
+      <div
+        className={`cart-drawer-backdrop ${showMobileCart ? "cart-drawer-backdrop--open" : ""}`}
+        onClick={() => setShowMobileCart(false)}
+      />
+      {!showMobileCart && (
+        <button className="cart-fab" onClick={() => setShowMobileCart(true)}>
+          <span className="cart-fab__left">
+            <ShoppingCart size={18} />
+            <span className="cart-fab__badge">{cartTotalQty}</span>
+            Lihat Keranjang
+          </span>
+          <span className="cart-fab__total">{formatRupiah(p.total)}</span>
+        </button>
+      )}
 
       {/* ── Modal Pembayaran ─────────────────────────────────────────── */}
       {p.showPayment && (

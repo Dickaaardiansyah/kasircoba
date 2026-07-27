@@ -3,7 +3,7 @@
 -- Jalankan sekali di MySQL/phpMyAdmin, SETELAH purchase.sql
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- Kolom untuk menyimpan path/URL file nota supplier (opsional).
 -- nota_url menyimpan path relatif file (mis. /uploads/nota/xxx.jpg),

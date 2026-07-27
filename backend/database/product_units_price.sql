@@ -18,7 +18,7 @@
 -- yang sudah ada — kolom baru ini hanya untuk satuan TAMBAHAN (BOX, LUSIN, dst).
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 ALTER TABLE product_units
   ADD COLUMN IF NOT EXISTS price DECIMAL(15,2) NULL

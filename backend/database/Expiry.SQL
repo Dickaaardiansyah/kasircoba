@@ -11,7 +11,7 @@
 --   • Dipakai oleh Laporan Barang Expired (Keuangan → Laporan).
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- Jika kolom sudah ada (mis. menjalankan ulang skrip ini), abaikan error
 -- "Duplicate column name" yang muncul — itu artinya migrasi sudah pernah

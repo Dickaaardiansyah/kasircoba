@@ -132,3 +132,35 @@ tbody tr:hover { background: var(--bg-card-hover); }
 .ui-pagination { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; flex-wrap: wrap; gap: 10px; }
 .ui-pagination__summary { font-size: 12px; color: var(--text-muted); }
 .ui-pagination__controls { display: flex; gap: 4px; }
+
+/* ── Responsive: layar sempit (tablet kecil & HP) ─────────────────────────── */
+@media (max-width: 768px) {
+  .modal-overlay { padding: 0; align-items: flex-end; }
+  .modal { max-width: 100%; max-height: 94vh; border-radius: 16px 16px 0 0; }
+  .modal--small, .modal--medium, .modal--large { max-width: 100%; }
+  .modal-header { padding: 16px 16px 12px; }
+  .modal-body { padding: 16px; }
+  .modal-footer { padding: 12px 16px 16px; flex-wrap: wrap; }
+  .modal-footer .btn { flex: 1; justify-content: center; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-card { padding: 14px 16px; gap: 10px; }
+  .stat-icon { width: 36px; height: 36px; }
+  .stat-info .value { font-size: 18px; }
+
+  .ui-section-header { flex-direction: column; align-items: stretch; }
+  .ui-section-header .btn { width: 100%; justify-content: center; }
+
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-bar > * { flex-shrink: 1; width: 100%; }
+
+  /* Modal cetak label barcode: dua kolom -> ditumpuk vertikal */
+  .barcode-modal-body { flex-direction: column; overflow-y: auto !important; }
+  .barcode-modal-sidebar { width: 100% !important; max-height: 45vh; border-right: none !important; border-bottom: 1px solid var(--border); }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .btn-lg { padding: 12px 18px; font-size: 14px; }
+  .page-title { font-size: 19px; }
+}

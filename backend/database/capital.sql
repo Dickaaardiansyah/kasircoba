@@ -20,7 +20,7 @@
 -- ekuitas usaha (lihat services/capitalService.js → summary()).
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- Tambahkan 'capital' ke enum reference_type jurnal (aman dijalankan ulang
 -- karena MODIFY COLUMN bersifat idempotent untuk definisi yang sama).

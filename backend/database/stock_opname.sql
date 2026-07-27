@@ -10,7 +10,7 @@
 --     Mutasi Stok.
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- ─── Kolom baru pada stock_history ─────────────────────────
 -- Jika kolom sudah ada (mis. menjalankan ulang skrip ini), abaikan error

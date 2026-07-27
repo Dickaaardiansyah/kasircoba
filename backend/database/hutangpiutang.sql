@@ -4,7 +4,7 @@
 -- dan purchase.sql (butuh tabel customers & suppliers).
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- ─── PIUTANG (header) ───────────────────────────────────────────
 -- Satu baris = satu faktur/tagihan piutang ke pelanggan. Bisa dibuat manual

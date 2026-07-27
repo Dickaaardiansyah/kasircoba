@@ -303,3 +303,32 @@
   border-radius: 50%;
   background: var(--accent-red, #ef4444);
 }
+
+/* ── Responsive: form produk di layar sempit ─────────────────────────────── */
+@media (max-width: 640px) {
+  .unit-conversion-row {
+    flex-wrap: wrap;
+  }
+  .unit-conversion-row__unit {
+    flex-basis: 100%;
+  }
+  .unit-conversion-row__qty,
+  .unit-conversion-row__spacer {
+    flex: 1 1 auto;
+    width: auto;
+  }
+  .unit-conversion-row__prices {
+    flex-wrap: wrap;
+  }
+  .unit-conversion-row__price-field {
+    flex-basis: 100%;
+  }
+  .product-form-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .product-form-tab {
+    flex-shrink: 0;
+  }
+}

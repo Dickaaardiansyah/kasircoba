@@ -3,7 +3,7 @@
 --  Jalankan: mysql -u root -p pos_refactor < customers.sql
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 CREATE TABLE IF NOT EXISTS customers (
   id          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

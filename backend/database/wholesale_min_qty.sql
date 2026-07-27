@@ -11,7 +11,7 @@
 -- beli >= 6 pcs), sejalan dengan referensi UX form Barang & Jasa.
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 ALTER TABLE products
   ADD COLUMN IF NOT EXISTS min_qty_wholesale INT UNSIGNED NULL

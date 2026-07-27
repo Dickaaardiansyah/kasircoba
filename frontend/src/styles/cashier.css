@@ -28,8 +28,69 @@
 .barcode-input.scanning { border-color: var(--accent-green); animation: scanPulse 0.5s ease; }
 @keyframes scanPulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(16,185,129,0.15); } 50% { box-shadow: 0 0 0 6px rgba(16,185,129,0.2); } }
 
+.cart-close-btn { display: none; }
+
+/* ── Tombol keranjang mengambang (khusus mobile) ───────────────────────────── */
+.cart-fab {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 140;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent-blue);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(37,99,235,0.35);
+}
+.cart-fab__left { display: flex; align-items: center; gap: 10px; }
+.cart-fab__badge {
+  min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px;
+  background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800;
+}
+.cart-fab__total { font-family: 'JetBrains Mono', monospace; }
+
+.cart-drawer-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 155;
+}
+
 @media (max-width: 768px) {
   .pos-layout { grid-template-columns: 1fr; }
-  .pos-cart { display: none; }
+  .pos-products { padding-bottom: 90px; }
+
+  /* Keranjang jadi drawer yang meluncur dari bawah, bukan disembunyikan total */
+  .pos-cart {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 12vh;
+    z-index: 165;
+    border-left: none;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -8px 32px rgba(15,23,42,0.25);
+    transform: translateY(105%);
+    transition: transform 0.28s ease;
+  }
+  .pos-cart--open { transform: translateY(0); }
+
+  .cart-fab { display: flex; }
+  .cart-close-btn { display: inline-flex; }
+  .cart-drawer-backdrop--open { display: block; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
 }

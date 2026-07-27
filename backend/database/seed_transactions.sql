@@ -1,4 +1,4 @@
-USE pos_refactor;
+USE pos_coba;
 
 INSERT IGNORE INTO transactions
   (transaction_code, total_amount, discount_amount, tax_amount, final_amount, payment_method, payment_amount, change_amount, cashier_name, status, created_at)

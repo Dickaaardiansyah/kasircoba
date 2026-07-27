@@ -407,10 +407,10 @@ export default function BarcodeModal({ products = [], initialProduct = null, onC
           </button>
         </div>
 
-        <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+        <div className="barcode-modal-body" style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
 
           {/* ── Panel Kiri: Pengaturan ── */}
-          <div style={{ width: 300, flexShrink: 0, borderRight: '1px solid var(--border)', overflowY: 'auto', padding: 20, display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <div className="barcode-modal-sidebar" style={{ width: 300, flexShrink: 0, borderRight: '1px solid var(--border)', overflowY: 'auto', padding: 20, display: 'flex', flexDirection: 'column', gap: 20 }}>
 
             {/* Tab: single vs multi */}
             <div style={{ display: 'flex', borderRadius: 10, overflow: 'hidden', border: '1px solid var(--border)' }}>

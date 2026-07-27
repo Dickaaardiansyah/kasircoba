@@ -10,11 +10,11 @@
 --     akurat meskipun harga modal produk berubah di kemudian hari.
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS pos_refactor
+CREATE DATABASE IF NOT EXISTS pos_coba
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE pos_refactor;
+USE pos_coba;
 
 -- ─── CATEGORIES ─────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS categories (

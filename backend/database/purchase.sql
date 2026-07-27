@@ -3,7 +3,7 @@
 -- Jalankan sekali di MySQL/phpMyAdmin
 -- ============================================================
 
-USE pos_refactor;
+USE pos_coba;
 
 -- Tabel supplier
 CREATE TABLE IF NOT EXISTS suppliers (
